@@ -1,4 +1,4 @@
-import Product from "../Product/Product";
+import Product from "./Product";
 import Image from "next/image";
 
 export default function EditorsChoice({ data }) {

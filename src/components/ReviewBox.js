@@ -1,4 +1,4 @@
-import Rating from "../Rating/Rating";
+import Rating from "./Rating";
 import Image from "next/image";
 import Link from "next/link";
 

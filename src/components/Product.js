@@ -1,6 +1,6 @@
 import { FiMenu } from "react-icons/fi";
 import Image from "next/image";
-import Rating from "../Rating/Rating";
+import Rating from "./Rating";
 
 export default function Product({ data }) {
   return (
