@@ -1,7 +1,9 @@
-import Rating from "../Rating";
+import Rating from "../Rating/Rating";
 import Image from "next/image";
-import womanPic from "./image/woman-pic.jpg";
 import Link from "next/link";
+
+const src =
+  "https://image.femaledaily.com/dyn/80/images/user-pics/72acded3acd45e4c8b6ed680854b8ab1jxqnwq1669093826846.jpeg";
 
 function Reviewer({ user, profile }) {
   return (
@@ -9,7 +11,8 @@ function Reviewer({ user, profile }) {
       <div>
         <Image
           className="rounded-full mr-2"
-          src={womanPic}
+          loader={() => src}
+          src={src}
           alt="product"
           width="48"
           height="48"
@@ -42,11 +45,11 @@ function ProductReview({ product }) {
 
 export default function ReviewBox({ reviewData }) {
   return (
-    <div className=" w-80">
+    <div className="w-full">
       <div className="divide-y p-3 border-2 rounded-lg">
         <ProductReview product={reviewData.product} />
         <div className="py-3">
-          <div className="flex justify-between">
+          <div className="flex justify-between flex-wrap">
             <Rating rate={reviewData.star} />
             <p className="text-gray-400 text-xs my-2">2 hours ago</p>
           </div>

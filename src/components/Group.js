@@ -1,15 +1,18 @@
 import Image from "next/image";
-import womanPic from "./image/woman-pic.jpg";
 import { BsPeopleFill, BsListUl } from "react-icons/bs";
 import { MdOutlineInsertComment } from "react-icons/md";
+
+const src =
+  "https://image.femaledaily.com/dyn/80/images/user-pics/72acded3acd45e4c8b6ed680854b8ab1jxqnwq1669093826846.jpeg";
 
 export default function Group({ groupData }) {
   return (
     <>
-      <div className="flex flex-col items-center w-64 border p-4">
+      <div className="flex flex-col w-full items-center border shadow-lg rounded-lg p-5">
         <Image
           className="rounded-full m-2"
-          src={womanPic}
+          loader={() => src}
+          src={src}
           alt="product"
           width="160"
           height="160"
